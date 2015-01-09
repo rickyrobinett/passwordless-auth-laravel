@@ -17,6 +17,10 @@ Route::get('/', function()
 });
 Route::post('user/validate/', 'UserController@validate');
 Route::post('user/auth/', 'UserController@auth');
+Route::get('login', function()
+{
+  return Response::json(array("error" => true));
+});
 Route::get('user/logout', function()
 {
   Auth::logout();
